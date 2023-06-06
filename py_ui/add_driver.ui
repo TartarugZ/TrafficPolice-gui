@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>AddDriver</class>
+ <widget class="QMainWindow" name="AddDriver">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>607</width>
+    <height>289</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Add driver</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#form{
+background:url(img/pbg4.jpg)
+}
+QFrame{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+QLineEdit{
+background:transparent;
+border:2px solid #2312ff;
+border-radius:15px;
+color:white;
+}
+QLineEdit:focus{
+background:transparent;
+border:2px solid red;
+border-radius:15px;
+color:white;
+}
+QPushButton{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+QPushButton:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+QLabel{
+color:white;
+background:transparent;
+
+}
+
+</string>
+  </property>
+  <widget class="QWidget" name="form">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>30</y>
+      <width>551</width>
+      <height>241</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="add_driver_passport">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>80</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="passport_lbl">
+     <property name="geometry">
+      <rect>
+       <x>280</x>
+       <y>80</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Серия и номер паспорта</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="add_driver_btn">
+     <property name="geometry">
+      <rect>
+       <x>180</x>
+       <y>170</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Добавить водителя</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

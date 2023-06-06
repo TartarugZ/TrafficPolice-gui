@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Confirm</class>
+ <widget class="QMainWindow" name="Confirm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>531</width>
+    <height>260</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Подтверждение</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+#form{
+background:url(img/pbg4.jpg)
+}
+QLabel{
+color:white
+}
+QLineEdit{
+background:transparent;
+border:2px solid #2312ff;
+border-radius:15px;
+color:white;
+}
+QLineEdit:focus{
+background:transparent;
+border:2px solid red;
+border-radius:15px;
+color:white;
+}
+QFrame{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+
+QComboBox{
+border:1px solid #2312ff;
+border-radius:4px;
+padding-left: 10px;
+background:rgba(0,0,0,0.7);
+color:white;
+}
+QComboBox:on{
+border:2px solid #2312ff;
+}
+QComboBox QListView{
+font-size:12px;
+border: 1px solid rgba(0,0,0,10%);
+padding: 5px;
+background:rgba(0,0,0,0.7);
+color:white;
+outline:0px;
+}
+QComboBox QListView::item{
+pading-left:10px;
+background-color:rgba(0,0,0,0.7);
+}
+QComboBox QListView::item:hover{
+background-color:#1e90ff;
+}
+QComboBox QListView::item:selected{
+background-color:#1e90ff;
+}
+QPushButton{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+QPushButton:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#show_password{
+border-radius:8px;
+background:grey;
+color:white;
+}
+#show_password:hover{
+border-radius:8px;
+border: 1px solid red;
+color:white;
+background:grey;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="form">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>30</x>
+      <y>50</y>
+      <width>471</width>
+      <height>161</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="delete_acc">
+     <property name="geometry">
+      <rect>
+       <x>160</x>
+       <y>90</y>
+       <width>171</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Удалить аккаунт</string>
+     </property>
+    </widget>
+    <widget class="QLineEdit" name="password">
+     <property name="geometry">
+      <rect>
+       <x>80</x>
+       <y>20</y>
+       <width>331</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>18</pointsize>
+      </font>
+     </property>
+     <property name="cursor">
+      <cursorShape>IBeamCursor</cursorShape>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+     <property name="placeholderText">
+      <string>Пароль</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="show_password">
+     <property name="geometry">
+      <rect>
+       <x>380</x>
+       <y>30</y>
+       <width>21</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+    </widget>
+    <widget class="QLabel" name="label">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>140</y>
+       <width>461</width>
+       <height>20</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>MS UI Gothic</family>
+       <pointsize>9</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

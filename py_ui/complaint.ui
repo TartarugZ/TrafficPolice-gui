@@ -1,0 +1,237 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Complaint</class>
+ <widget class="QMainWindow" name="Complaint">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Complaint</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">#form{
+background:url(img/pbg4.jpg)
+}
+QCheckBox{
+color:white
+}
+QFrame{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+QTextEdit{
+background: rgba(0,0,0,0.5);
+border-radius:15px;
+border: 2px solid blue;
+color:white
+}
+QLineEdit{
+background:transparent;
+border:2px solid #2312ff;
+border-radius:15px;
+color:white;
+}
+QLineEdit:focus{
+background:transparent;
+border:2px solid red;
+border-radius:15px;
+color:white;
+}
+QPushButton{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+QPushButton:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+QLabel{
+color:white;
+background:transparent;
+
+}</string>
+  </property>
+  <widget class="QWidget" name="form">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>20</y>
+      <width>771</width>
+      <height>561</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLineEdit" name="passport">
+     <property name="geometry">
+      <rect>
+       <x>30</x>
+       <y>60</y>
+       <width>221</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="passport_lbl">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>60</y>
+       <width>211</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Серия и номер паспорта</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="driver_lisence_lbl">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>120</y>
+       <width>391</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Были ли вы водителем во время возбуждения дела?</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="send_complaint">
+     <property name="geometry">
+      <rect>
+       <x>420</x>
+       <y>440</y>
+       <width>161</width>
+       <height>51</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Создать жалобу</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="was_a_driver">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>120</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Да</string>
+     </property>
+    </widget>
+    <widget class="QCheckBox" name="full_justification">
+     <property name="geometry">
+      <rect>
+       <x>100</x>
+       <y>170</y>
+       <width>70</width>
+       <height>17</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string>Да</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="driver_lisence_lbl_2">
+     <property name="geometry">
+      <rect>
+       <x>320</x>
+       <y>160</y>
+       <width>391</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Хотите ли вы быть полностью оправданы?</string>
+     </property>
+    </widget>
+    <widget class="QTextEdit" name="comment">
+     <property name="geometry">
+      <rect>
+       <x>40</x>
+       <y>210</y>
+       <width>461</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="placeholderText">
+      <string>Обязательно для заполнения</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="driver_lisence_lbl_3">
+     <property name="geometry">
+      <rect>
+       <x>510</x>
+       <y>300</y>
+       <width>191</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Ваш комментарий</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

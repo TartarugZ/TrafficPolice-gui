@@ -1,0 +1,611 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>CasePay</class>
+ <widget class="QMainWindow" name="CasePay">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>800</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Case pay</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+#form{
+background:url(img/pbg4.jpg)
+}
+#comp_message{
+color:white;
+background:transparent;
+}
+#choose_person_lbl{
+color:white;
+background:transparent;
+}
+#choose_case_lbl{
+color:white;
+background:transparent;
+}
+#complain{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+#find_complaint{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+#find_complaint:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#complain:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#case_fine_pay:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#complain:disabled{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+QTextEdit{
+background: transparent;
+border-radius:15px;
+color:white
+}
+QFrame{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+#pay_frame_1{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+#pay_frame_2{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+QComboBox{
+border:1px solid #2312ff;
+border-radius:4px;
+padding-left: 10px;
+background:rgba(0,0,0,0.7);
+color:white;
+}
+QComboBox:on{
+border:2px solid #2312ff;
+}
+QComboBox QListView{
+font-size:12px;
+border: 1px solid rgba(0,0,0,10%);
+padding: 5px;
+background:rgba(0,0,0,0.7);
+color:white;
+outline:0px;
+}
+QComboBox QListView::item{
+pading-left:10px;
+background-color:rgba(0,0,0,0.7);
+}
+QComboBox QListView::item:hover{
+background-color:#1e90ff;
+}
+QComboBox QListView::item:selected{
+background-color:#1e90ff;
+}
+#sum_fine_pay{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+#case_fine_pay{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+#sum_fine_pay:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#case_fine_pay:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#add_person{
+border-radius:4px;
+color:white;
+background:rgb(0,128,0);
+}
+#delete_person{
+border-radius:4px;
+color:white;
+background:rgb(130,0,2);
+}
+#sum_fine_lbl{
+color:white;
+border:4px solid blue;
+border-radius:15px;
+}
+#case_fine_lbl{
+color:white;
+border:4px solid blue;
+border-radius:15px;
+}
+QLabel{
+color:white;
+
+}
+#sum_fine_value{
+color:white;
+border:2px solid blue;
+border-radius:15px;
+}
+#case_fine_value{
+color:white;
+border:2px solid blue;
+border-radius:15px;
+}
+#sum_fine_pay:disabled{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#case_fine_pay:disabled{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+#back{
+border-radius:15px;
+color:white;
+border:2px solid #fff;
+background:transparent;
+}
+#back:hover{
+border-radius:15px;
+border:2px solid rgb(200, 0 ,8);
+color:white;
+background: transparent;
+}
+#del_acc{
+border-radius:15px;
+color:white;
+border:2px solid #fff;
+background:transparent;
+}
+#del_acc:hover{
+border-radius:15px;
+border:2px solid rgb(200, 0 ,8);
+color:white;
+background: transparent;
+}</string>
+  </property>
+  <widget class="QWidget" name="form">
+   <widget class="QComboBox" name="cb_person">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>30</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QLabel" name="choose_person_lbl">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>10</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Выберите водителя:</string>
+    </property>
+   </widget>
+   <widget class="QComboBox" name="cb_case">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>91</y>
+      <width>371</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+   </widget>
+   <widget class="QFrame" name="case_frame">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>140</y>
+      <width>371</width>
+      <height>401</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QTextEdit" name="case_te">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>351</width>
+       <height>371</height>
+      </rect>
+     </property>
+     <property name="lineWrapMode">
+      <enum>QTextEdit::WidgetWidth</enum>
+     </property>
+     <property name="readOnly">
+      <bool>true</bool>
+     </property>
+     <property name="placeholderText">
+      <string notr="true">......</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="pay_frame_1">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>30</y>
+      <width>361</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QLabel" name="sum_fine_lbl">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>341</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Общая сумма штрафов к оплате</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="sum_fine_value">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>110</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="sum_fine_pay">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>110</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Оплатить</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QFrame" name="pay_frame_2">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>210</y>
+      <width>361</width>
+      <height>181</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="case_fine_pay">
+     <property name="geometry">
+      <rect>
+       <x>200</x>
+       <y>120</y>
+       <width>151</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Оплатить</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="case_fine_value">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>120</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+    <widget class="QLabel" name="case_fine_lbl">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>20</y>
+       <width>341</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Штраф за нарушение</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QPushButton" name="add_person">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>30</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>+</string>
+    </property>
+   </widget>
+   <widget class="QLabel" name="choose_case_lbl">
+    <property name="geometry">
+     <rect>
+      <x>10</x>
+      <y>70</y>
+      <width>151</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Выберите дело:</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="delete_person">
+    <property name="geometry">
+     <rect>
+      <x>390</x>
+      <y>50</y>
+      <width>16</width>
+      <height>16</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>11</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>-</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="back">
+    <property name="geometry">
+     <rect>
+      <x>20</x>
+      <y>560</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Назад в меню</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="del_acc">
+    <property name="geometry">
+     <rect>
+      <x>170</x>
+      <y>560</y>
+      <width>121</width>
+      <height>31</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Удалить аккаунт</string>
+    </property>
+   </widget>
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>430</x>
+      <y>410</y>
+      <width>361</width>
+      <height>131</height>
+     </rect>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QPushButton" name="find_complaint">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>40</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Найти аппеляцию</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="complain">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>40</y>
+       <width>161</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Подать аппеляцию</string>
+     </property>
+    </widget>
+    <widget class="QLabel" name="comp_message">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>100</y>
+       <width>341</width>
+       <height>21</height>
+      </rect>
+     </property>
+     <property name="text">
+      <string/>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

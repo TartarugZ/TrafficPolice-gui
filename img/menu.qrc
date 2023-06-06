@@ -1,0 +1,11 @@
+<RCC>
+  <qresource prefix="img">
+    <file>bg11.jpg</file>
+    <file>bg111.jpg</file>
+    <file>pbg2.jpg</file>
+    <file>pbg4.jpg</file>
+    <file>question.png</file>
+    <file>user.png</file>
+    <file>police.png</file>
+  </qresource>
+</RCC>

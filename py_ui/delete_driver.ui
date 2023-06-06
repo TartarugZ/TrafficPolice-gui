@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DeleteDriver</class>
+ <widget class="QMainWindow" name="DeleteDriver">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>613</width>
+    <height>244</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Delete driver</string>
+  </property>
+  <property name="layoutDirection">
+   <enum>Qt::LeftToRight</enum>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+#form{
+background:url(img/pbg4.jpg)
+}
+
+QFrame{
+background: rgba(0,0,0,0.7);
+border-radius:15px;
+}
+
+QComboBox{
+border:1px solid #2312ff;
+border-radius:4px;
+padding-left: 10px;
+background:rgba(0,0,0,0.7);
+color:white;
+}
+QComboBox:on{
+border:2px solid #2312ff;
+}
+QComboBox QListView{
+font-size:12px;
+border: 1px solid rgba(0,0,0,10%);
+padding: 5px;
+background:rgba(0,0,0,0.7);
+color:white;
+outline:0px;
+}
+QComboBox QListView::item{
+pading-left:10px;
+background-color:rgba(0,0,0,0.7);
+}
+QComboBox QListView::item:hover{
+background-color:#1e90ff;
+}
+QComboBox QListView::item:selected{
+background-color:#1e90ff;
+}
+QPushButton{
+border-radius:15px;
+color:white;
+border:2px solid #2312ff;
+background:transparent;
+}
+QPushButton:hover{
+border-radius:15px;
+border:2px solid red;
+color:white;
+background: transparent;
+}
+</string>
+  </property>
+  <widget class="QWidget" name="form">
+   <widget class="QFrame" name="frame">
+    <property name="geometry">
+     <rect>
+      <x>60</x>
+      <y>40</y>
+      <width>491</width>
+      <height>171</height>
+     </rect>
+    </property>
+    <property name="layoutDirection">
+     <enum>Qt::LeftToRight</enum>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::StyledPanel</enum>
+    </property>
+    <property name="frameShadow">
+     <enum>QFrame::Raised</enum>
+    </property>
+    <widget class="QComboBox" name="cb_drivers">
+     <property name="geometry">
+      <rect>
+       <x>10</x>
+       <y>10</y>
+       <width>461</width>
+       <height>31</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="delete_driver_btn">
+     <property name="geometry">
+      <rect>
+       <x>130</x>
+       <y>90</y>
+       <width>221</width>
+       <height>41</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Century Gothic</family>
+       <pointsize>11</pointsize>
+      </font>
+     </property>
+     <property name="text">
+      <string>Удалить водителя</string>
+     </property>
+    </widget>
+   </widget>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
