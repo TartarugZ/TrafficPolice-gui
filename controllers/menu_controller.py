@@ -94,6 +94,8 @@ class Menu(QtWidgets.QMainWindow, Ui_Menu):
         self.login_line.setGeometry(20, 160, 331, 41)
         self.username.show()
         self.phone.show()
+        self.login_line.clear()
+        self.password_line.clear()
         self.employee.hide()
         self.login_line.setPlaceholderText('Email')
         self.password_line.setEchoMode(2)

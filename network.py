@@ -171,13 +171,15 @@ class Network:
                 phone = phone[-10:]
 
             body = {
-                "email": email,
+                "email": str(email).lower(),
                 "phone_number": phone,
                 "username": username,
                 "password": password
             }
             response = self.session.post(
                 url=f'{self.URL}/acc/citizen', json=body, timeout=7)
+            if response.status_code == 500:
+                raise ServerError
             if response.status_code == 401:
                 print('refresh token')
                 raise NeedRefreshToken

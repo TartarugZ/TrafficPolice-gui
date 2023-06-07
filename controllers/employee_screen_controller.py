@@ -44,7 +44,7 @@ class EmployeeScreen(QtWidgets.QMainWindow, Ui_EmployeeScreen):
             self.submit_find_complaint_2.clicked.connect(self.submit_find_complaint_2_pressed)
             self.good.clicked.connect(self.good_pressed)
             self.bad.clicked.connect(self.bad_pressed)
-            self.setGeometry(100, 100, 1018, 647)
+            self.setGeometry(300, 150, 1018, 647)
             self.articles = self.network.get_articles()
             self.added_articles = {}
         except Exception as e:
@@ -452,12 +452,12 @@ class EmployeeScreen(QtWidgets.QMainWindow, Ui_EmployeeScreen):
 
     def create_case_pressed(self):
         self.hide_all()
-        self.setGeometry(100, 100, 1803, 647)
+        self.setGeometry(100, 150, 1803, 647)
         self.create_case.setEnabled(False)
         self.frame_create_case.show()
 
     def hide_all(self):
-        self.setGeometry(100, 100, 1018, 647)
+        self.setGeometry(300, 150, 1018, 647)
         self.car_users = {}
         self.output_cb.setPlaceholderText('......')
         self.cases = {}

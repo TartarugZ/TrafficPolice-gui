@@ -49,6 +49,7 @@ for i in range(len(license_categories)):
         for k in record:
             j.append(k[0])
         start_date = j[0]
+        bb = j[0]
         for r in exist_categories:
             if r[1] == license_number:
                 end_date = start_date + relativedelta(years=2)
@@ -56,7 +57,12 @@ for i in range(len(license_categories)):
                 rand_days = random.randint(1, num_days)
                 start_date = start_date + datetime.timedelta(days=rand_days)
         exist_categories.append((category_number, license_number))
-
+        while start_date > datetime.date(2023, 6, 7):
+            start_date = bb
+            end_date = start_date + relativedelta(years=2)
+            num_days = (end_date - start_date).days
+            rand_days = random.randint(1, num_days)
+            start_date = start_date + datetime.timedelta(days=rand_days)
         result = '(\'' + str(license_number) + '\',\'' + str(start_date) + '\',' + str(category_number) + ')'
         print(result)
 

@@ -65,7 +65,12 @@ class CasePay(QtWidgets.QMainWindow, Ui_CasePay):
                 self.case_te.setText(self.cases[self.cb_case.currentText()])
                 if len(self.fines) > 0:
                     try:
+                        print('choose')
+                        print(self.fines)
+                        print(self.fines[self.cb_case.currentText()])
                         if self.fines[self.cb_case.currentText()] != '0' or self.fines[self.cb_case.currentText()] != 0:
+                            print('choose_2')
+                            print(self.fines)
                             self.case_fine_value.setText(str(self.fines[self.cb_case.currentText()]))
                         else:
                             self.case_fine_value.setText('0')
@@ -104,6 +109,7 @@ class CasePay(QtWidgets.QMainWindow, Ui_CasePay):
                     for (key, value) in case.items():
                         key_temp = key
                         value_temp = value
+                        payed = False
                         if key == 'case_id':
                             key_temp = 'Номер дела'
                         if key == 'vin':
@@ -162,10 +168,18 @@ class CasePay(QtWidgets.QMainWindow, Ui_CasePay):
                                     if jk == 'date_payment':
                                         if jv is None or jv == 'None':
                                             jv = 'Не оплачено'
+                                            payed = False
+                                        else:
+                                            payed = True
                                         jk = 'Дата оплаты штрафа'
                                     if jk == 'sum':
                                         jk = 'Сумма штрафа'
-
+                                        if not payed:
+                                            print(jv)
+                                            if int(jv) > 0:
+                                                self.fines[str(temp)] = jv
+                                                print('parse')
+                                                print(self.fines)
                                     king_in_the_castle = king_in_the_castle + str(jk) + '\n' + str(jv) + '\n'
                                 king_in_the_castle = king_in_the_castle + '\n'
                             value_temp = king_in_the_castle

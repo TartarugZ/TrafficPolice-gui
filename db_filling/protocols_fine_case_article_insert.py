@@ -52,7 +52,7 @@ for i in range(n):
 
     rand_days = random.randint(1, 20)
     date_of_review = date_of_case + datetime.timedelta(days=rand_days)
-    while date_of_case > datetime.date(2023, 5, 30):
+    if date_of_case > datetime.date(2023, 5, 30):
         date_of_review = None
     camera_id = pac[random_area][2]
     case_reason = a_d[random_article][1]
