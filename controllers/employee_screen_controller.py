@@ -342,16 +342,13 @@ class EmployeeScreen(QtWidgets.QMainWindow, Ui_EmployeeScreen):
         try:
             reply = self.network.get_info_by_car(self.car_vin.text(), self.car_gosnumber.text(),
                                                  self.car_region.text())
-            print('BASE')
-            print(reply)
-            print('BASE')
+
             reply_temp = str(reply).replace('\'', '\"')
-            print(reply)
-            print('Already here')
+
             if is_json(reply_temp):
-                print('I am JSON')
+
                 output_car = reply['car']
-                print(output_car)
+
                 parsing_car = []
                 full_name = ''
                 for (key, value) in output_car.items():

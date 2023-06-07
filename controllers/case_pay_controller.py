@@ -175,10 +175,8 @@ class CasePay(QtWidgets.QMainWindow, Ui_CasePay):
                                     if jk == 'sum':
                                         jk = 'Сумма штрафа'
                                         if not payed:
-                                            print(jv)
                                             if int(jv) > 0:
                                                 self.fines[str(temp)] = jv
-                                                print('parse')
                                                 print(self.fines)
                                     king_in_the_castle = king_in_the_castle + str(jk) + '\n' + str(jv) + '\n'
                                 king_in_the_castle = king_in_the_castle + '\n'

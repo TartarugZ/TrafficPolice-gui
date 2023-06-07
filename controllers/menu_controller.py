@@ -169,17 +169,19 @@ class Menu(QtWidgets.QMainWindow, Ui_Menu):
                 else:
                     self.message.setText('Неправильно указаны данные')
         elif self.restore_password and self.password_line.isHidden():
-            self.password_line.show()
-            self.password_line.setText('')
-            self.enter.setText('ОК')
-            self.show_password.hide()
-            self.login_line.setPlaceholderText('Код')
-            self.password_line.setEchoMode(2)
-            # TODO: Отправить код на почту
+            pass
+            # self.password_line.show()
+            # self.password_line.setText('')
+            # self.enter.setText('ОК')
+            # self.show_password.hide()
+            # self.login_line.setPlaceholderText('Код')
+            # self.password_line.setEchoMode(2)
+            # # Отправить код на почту
         elif self.restore_password and not self.password_line.isHidden():
-            # TODO: Ввод нового пароля
-            self.back_pressed()
-            self.password_line.setEchoMode(2)
+            pass
+            # Ввод нового пароля
+            # self.back_pressed()
+            # self.password_line.setEchoMode(2)
         elif self.citizen.isEnabled():
             try:
                 if self.login_line.text().strip() != '' and self.password_line.text().strip() != '':
